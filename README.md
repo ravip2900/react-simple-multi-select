@@ -58,11 +58,11 @@ class  Example extends React.Component{
 
 #### Configurable Props
 Props | Type | Required | Default Value | Description
------ | ---- | ------------- | -----------
-'title` | `String` | `true` | Multi Select | title of the multi select
+--- | --- | --- | --- | ---
+`title` | `String` | `true` | Multi Select | title of the multi select
 `itemList` | `Array` | `true` | [] | list of items
 `selectedItemList` | `Array` | `true` | [] | selected list of items
-`changeList` | `Func` | `true` | null | function to modify the list
+`changeList` | `Func` | `true` | null | `function` to modify the list
 `borderRadius` | `Number` | false | 4 | border radius
 `borderColor` | `String` | false | default | border color
 `borderTopColor` | `String` | false | default | border top color
