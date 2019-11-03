@@ -1,7 +1,7 @@
 # React Simple Multi Select
 **React Simple Multi Select** is a light weight package and easy to use and configure.
 
-![Live Image]()
+![Live Image](https://res.cloudinary.com/ravip2900/image/upload/s--ceHPmyJo--/v1572771458/images/react-simple-multi-select.gif)
 
 #### Installation
 ```sh
@@ -55,6 +55,8 @@ class  Example extends React.Component{
     )
   }
 }
+
+```
 
 #### Configurable Props
 Props | Type | Required | Default Value | Description
