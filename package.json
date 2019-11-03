@@ -1,0 +1,48 @@
+{
+  "name": "react-simple-multi-select",
+  "version": "1.0.0",
+  "description": "\"React based simple multi select, light weight package and easy to use.",
+  "main": "build/components/MultiSelect.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --color --config webpack.config.js",
+    "build": "rimraf build && cross-env NODE_ENV=production babel src --ignore '**/*Root.js, **/*example.js' -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravip2900/react-simple-multi-select.git"
+  },
+  "keywords": [
+    "select",
+    "drop down",
+    "multi select",
+    "multi select drop down"
+  ],
+  "author": "Ravi P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravip2900/react-simple-multi-select/issues"
+  },
+  "homepage": "https://github.com/ravip2900/react-simple-multi-select#readme",
+  "dependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "babel-register": "^6.26.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-hot-loader": "^4.12.15",
+    "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
