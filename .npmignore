@@ -2,3 +2,5 @@ src
 .gitignore
 webpack.config.dev.js
 .babelrc
+build/example.js
+build/Root.js
