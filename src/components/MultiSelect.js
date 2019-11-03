@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './multiSelect.css'
 import PropTypes from 'prop-types';
+import {Wrapper, Button, DropDown, DropIcon, ListItem, ItemCheck, ItemLabel, ItemSpan} from './index';
 
 class MultiSelect extends React.Component{
   constructor(props){
@@ -38,12 +38,12 @@ class MultiSelect extends React.Component{
         selectedItemList.splice(index,1)
       }
       return(
-        <li className="list-item-li" key={item} onClick={ () => this.props.changeList(item, index>-1?false:true) }>
-          <input type='checkbox' className="list-item-check" checked={index>-1?true:false} />
-          <label className="list-item-label">
-            <span className="list-item-span">{item}</span>
-          </label>
-        </li>
+        <ListItem key={item} onClick={ () => this.props.changeList(item, index>-1?false:true) }>
+          <ItemCheck type='checkbox' checked={index>-1?true:false} />
+          <ItemLabel>
+            <ItemSpan>{item}</ItemSpan>
+          </ItemLabel>
+        </ListItem>
       )
     });
   }
@@ -60,24 +60,19 @@ class MultiSelect extends React.Component{
         color : this.props.textColor
       };
     return(
-      <div ref={(node)=>this.wrapperRef=node} id="multi-select-button">
-        <button role="button"
-          aria-haspopup="true"
-          aria-expanded="true" type="button" className="button"
-          onClick={() => this.handleClickOpen()}
-          style={styles}
-        >
+      <Wrapper ref={(node)=>this.wrapperRef=node}>
+        <Button  onClick={() => this.handleClickOpen()} style={styles}>
           {this.props.title || 'Multi Select'}
-          <span className="drop-icon" style={{color:this.props.iconColor}}>&#9662;</span>
-        </button>
+          <DropIcon style={{color:this.props.iconColor}}>&#9662;</DropIcon>
+        </Button>
         {
           display && (
-            <ul role="menu" className="drop-down">
+            <DropDown role="menu">
               {this.renderList()}
-            </ul>
+            </DropDown>
           )
         }
-      </div>
+      </Wrapper>
     )
   }
 }

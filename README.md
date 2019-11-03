@@ -1,5 +1,5 @@
 # React Simple Multi Select
-**React Simple Multi Select** is a light weight package and easy to use and configure.
+**React Simple Multi Select** is easy to use and configure.
 
 ![Live Image](https://res.cloudinary.com/ravip2900/image/upload/s--ceHPmyJo--/v1572771458/images/react-simple-multi-select.gif)
 

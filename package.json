@@ -1,7 +1,7 @@
 {
   "name": "react-simple-multi-select",
   "version": "1.0.5",
-  "description": "\"React based simple multi select, light weight package and easy to use.",
+  "description": "\"simple multi select and easy to use, built on styled components",
   "main": "build/components/MultiSelect.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --color --config webpack.config.js",
@@ -45,6 +45,7 @@
     "react-dom": "^16.11.0",
     "react-hot-loader": "^4.12.15",
     "style-loader": "^1.0.0",
+    "styled-components": "^4.4.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
