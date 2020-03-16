@@ -6,19 +6,30 @@ class Root extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      itemList:['A', 'B', 'C', 'D', 'E'],
-      selectedItemList:['A', 'C', 'E']
+      itemList: [
+        {key:"React Js", value:"react"},
+        {key:"Node Js", value:"node"},
+        {key:"Express Js", value:"express"},
+        {key:"Next Js", value:"next"},
+        {key:"Vue Js", value:"vue"},
+        {key:"Mongo Db", value:"mongo"}
+      ],
+      selectedItemList: [
+        {key:"React Js", value:"react"},
+        {key:"Next Js", value:"next"},
+        {key:"Mongo Db", value:"mongo"}
+      ]
+      // ,
+      // selectedValues:[
+      //   "react",
+      //   "next",
+      //   "mongo"
+      // ]
     };
     this.changeList = this.changeList.bind(this);
   }
 
-  changeList(item, action){
-    let {selectedItemList} = this.state;
-    if(action){
-      selectedItemList.push(item);
-    }else{
-      selectedItemList.splice(selectedItemList.indexOf(item),1);
-    }
+  changeList(selectedItemList){
     this.setState({selectedItemList});
   }
 
@@ -31,6 +42,8 @@ class Root extends React.Component{
           itemList={this.state.itemList}
           selectedItemList={this.state.selectedItemList}
           changeList={this.changeList}
+          isObjectArray={true}
+          // selectedValues={this.state.selectedValues}
           // borderRadius={40}
           // borderColor={""}
           // borderTopColor={"purple"}

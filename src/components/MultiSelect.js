@@ -28,20 +28,54 @@ class MultiSelect extends React.Component{
     window.removeEventListenr('mousedown', this.handleClickOutside, false);
   }
 
+  changeList(item, action){
+    let {selectedItemList=[], isObjectArray} = this.props;
+    if(action){
+      selectedItemList.push(item);
+      // selectedValues.push(isObjectArray ? item.value : item);
+    }else{
+      let index;
+      if(isObjectArray){
+        for(let i=0; i<selectedItemList.length; i++){
+          if(item.key == selectedItemList[i].key){
+            index = i;
+            break;
+          }
+        }
+      }else{
+        index = selectedItemList.indexOf(item);
+      }
+      // selectedValues.splice(index,1);
+      selectedItemList.splice(index,1);
+    }
+    this.props.changeList(selectedItemList);
+  }
+
   renderList(){
-    let {itemList=[]} = this.props,
+    let {itemList=[], isObjectArray} = this.props,
       selectedItemList = this.props.selectedItemList ?  [...this.props.selectedItemList] : [];
 
     return itemList.map(item=>{
-      const index = selectedItemList.indexOf(item);
+      let index;
+      if(isObjectArray){
+        for(let i=0; i<selectedItemList.length; i++){
+          if(item.key == selectedItemList[i].key){
+            index = i;
+            break;
+          }
+        }
+      }else{
+        index = selectedItemList.indexOf(item);
+      }
+
       if(index >-1){
         selectedItemList.splice(index,1)
       }
       return(
-        <ListItem key={item} onClick={ () => this.props.changeList(item, index>-1?false:true) }>
+        <ListItem key={isObjectArray ? item.key : item} onClick={ () => this.changeList(item, index>-1?false:true) }>
           <ItemCheck type='checkbox' checked={index>-1?true:false} />
           <ItemLabel>
-            <ItemSpan>{item}</ItemSpan>
+            <ItemSpan>{isObjectArray ? item.key : item}</ItemSpan>
           </ItemLabel>
         </ListItem>
       )

@@ -15,7 +15,7 @@ $ npm start
 ```
 It'll open localhost:2900 port, where you can see live demo.
 
-#### Example
+#### 1). Array of values Example
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom'
@@ -25,19 +25,24 @@ class  Example extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      itemList:['A', 'B', 'C', 'D', 'E'],
-      selectedItemList:['A', 'C', 'E']
+      itemList: [
+        "React Js",
+        "Node Js",
+        "Express Js",
+        "Next Js",
+        "Vue Js",
+        "Mongo Db"
+      ],
+      selectedItemList: [
+        "React Js",
+        "Next Js",
+        "Mongo Db"
+      ]
     };
     this.changeList = this.changeList.bind(this);
   }
 
-  changeList(item, action){
-    let {selectedItemList} = this.state;
-    if(action){
-      selectedItemList.push(item);
-    }else{
-      selectedItemList.splice(selectedItemList.indexOf(item),1);
-    }
+  changeList(selectedItemList){
     this.setState({selectedItemList});
   }
 
@@ -50,6 +55,55 @@ class  Example extends React.Component{
           itemList={this.state.itemList}
           selectedItemList={this.state.selectedItemList}
           changeList={this.changeList}
+        />
+      </div>
+    )
+  }
+}
+
+```
+
+#### 1). Array of Objects Example
+```js
+import React from 'react';
+import ReactDOM from 'react-dom'
+import MultiSelect from 'react-simple-multi-select';
+
+class  Example extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={
+      itemList: [
+        {key:"React Js", value:"react"},
+        {key:"Node Js", value:"node"},
+        {key:"Express Js", value:"express"},
+        {key:"Next Js", value:"next"},
+        {key:"Vue Js", value:"vue"},
+        {key:"Mongo Db", value:"mongo"}
+      ],
+      selectedItemList: [
+        {key:"React Js", value:"react"},
+        {key:"Next Js", value:"next"},
+        {key:"Mongo Db", value:"mongo"}
+      ]
+    };
+    this.changeList = this.changeList.bind(this);
+  }
+
+  changeList(selectedItemList){
+    this.setState({selectedItemList});
+  }
+
+  render(){
+    return(
+      <div>
+        <h1>React Simple Multi Select</h1>
+        <MultiSelect
+          title={"Multi Select"}
+          itemList={this.state.itemList}
+          selectedItemList={this.state.selectedItemList}
+          changeList={this.changeList}
+          isObjectArray={true}
         />
       </div>
     )
@@ -73,6 +127,7 @@ Props | Type | Required | Default Value | Description
 `borderBottomColor` | `String` | false | default | border bottom color
 `textColor` | `String` | false | default | multi select text color
 `iconColor` | `String` | false | default | icon color
+`isObjectArray` | `Boolean` | false | false | required if passing array of objects
 
 License
 ----
