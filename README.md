@@ -63,7 +63,7 @@ class  Example extends React.Component{
 
 ```
 
-#### 1). Array of Objects Example
+#### 2). Array of Objects Example
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom'
