@@ -55,7 +55,6 @@ class Root extends React.Component{
           // listItemColor={"blue"}
           // listBackgroundColor={"red"}
         />
-        <h1>hello</h1>
       </div>
     )
   }
