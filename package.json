@@ -1,6 +1,6 @@
 {
   "name": "react-simple-multi-select",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "\"simple multi select and easy to use, built on styled components",
   "main": "build/components/MultiSelect.js",
   "scripts": {
