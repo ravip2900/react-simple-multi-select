@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/ravip2900/react-simple-multi-select#readme",
   "dependencies": {
-    "react": "^16.2.0"
+    "react": "^16.2.0",
+    "styled-components": "^4.4.1"
   },
   "peerDependencies": {
     "react": "^16.2.0"
@@ -45,7 +46,6 @@
     "react-dom": "^16.11.0",
     "react-hot-loader": "^4.12.15",
     "style-loader": "^1.0.0",
-    "styled-components": "^4.4.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",

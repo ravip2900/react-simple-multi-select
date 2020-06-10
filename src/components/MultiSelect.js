@@ -74,7 +74,7 @@ class MultiSelect extends React.Component{
       return(
         <ListItem key={isObjectArray ? item.key : item} onClick={ () => this.changeList(item, index>-1?false:true) }>
           <ItemCheck type='checkbox' checked={index>-1?true:false} />
-          <ItemLabel>
+          <ItemLabel style={{color: this.props.listItemColor}}>
             <ItemSpan>{isObjectArray ? item.key : item}</ItemSpan>
           </ItemLabel>
         </ListItem>
@@ -101,7 +101,7 @@ class MultiSelect extends React.Component{
         </Button>
         {
           display && (
-            <DropDown role="menu">
+            <DropDown role="menu" style={{background : this.props.listBackgroundColor }}>
               {this.renderList()}
             </DropDown>
           )
@@ -123,7 +123,9 @@ const propTypes={
   borderLeftColor : PropTypes.string,
   borderBottomColor : PropTypes.string,
   textColor : PropTypes.string,
-  iconColor : PropTypes.string
+  iconColor : PropTypes.string,
+  listItemColor : PropTypes.string,
+  listBackgroundColor : PropTypes.string
 }
 
 MultiSelect.propTypes = propTypes;

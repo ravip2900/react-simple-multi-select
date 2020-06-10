@@ -28,6 +28,7 @@ export const DropDown = styled.ul`
   padding: 5px;
   margin: 0;
   text-align: left !important;
+  z-index : 1;
 `;
 
 export const DropIcon = styled.span`
@@ -50,6 +51,7 @@ export const ItemSpan = styled.span`
 
 export const ItemLabel = styled.label`
   cursor: pointer !important;
+  color : black;
 `;
 
 export const ItemCheck = styled.input`

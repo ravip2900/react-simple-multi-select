@@ -128,6 +128,8 @@ Props | Type | Required | Default Value | Description
 `textColor` | `String` | false | default | multi select text color
 `iconColor` | `String` | false | default | icon color
 `isObjectArray` | `Boolean` | false | false | required if passing array of objects
+`listItemColor` | `String` | false | black | list item color
+`listBackgroundColor` | `String` | false | white | list background color
 
 License
 ----

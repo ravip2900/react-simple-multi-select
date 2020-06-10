@@ -52,7 +52,10 @@ class Root extends React.Component{
           // borderBottomColor={'orange'}
           // textColor={'blue'}
           // iconColor={'brown'}
+          // listItemColor={"blue"}
+          // listBackgroundColor={"red"}
         />
+        <h1>hello</h1>
       </div>
     )
   }
